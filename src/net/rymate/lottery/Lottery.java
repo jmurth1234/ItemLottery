@@ -17,6 +17,7 @@ import java.util.logging.Logger;
 public class Lottery extends JavaPlugin {
     private Logger log;
     private PluginDescriptionFile description;
+    public LotteryFileHandler yaml = new LotteryFileHandler(this);
 
     private String prefix;
 
@@ -28,6 +29,7 @@ public class Lottery extends JavaPlugin {
         prefix = "[" + description.getName() + "] ";
 
         log("loading " + description.getFullName());
+        yaml.loadConfig();
 
 
         getCommand("/lottery").setExecutor(new LotteryCommand(this));

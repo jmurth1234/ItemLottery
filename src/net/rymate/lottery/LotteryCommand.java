@@ -12,7 +12,10 @@ import org.bukkit.command.CommandSender;
  * To change this template use File | Settings | File Templates.
  */
 public class LotteryCommand implements CommandExecutor {
+    private Lottery plugin;
+
     public LotteryCommand(Lottery lottery) {
+        this.plugin = lottery;
     }
 
     @Override
