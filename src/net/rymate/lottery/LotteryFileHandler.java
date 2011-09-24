@@ -26,9 +26,12 @@ public class LotteryFileHandler {
     public void loadConfig() {
         if (!lotteryFile.exists()) {
             plugin.log("Config wasn't found! Generating sample!");
+            c.load();
             c.setProperty("lottery.sample.chance", "50");
             c.setProperty("lottery.sample.cost", "4:256, 1:256");
             c.setProperty("lottery.sample.prizes", "15:32, 1:10, 64:10");
+            c.save();
+            plugin.log("We be done. Please edit the config then do /lotteryreload ingame.");
         } else {
             //initiate standard loading
         }

@@ -32,8 +32,8 @@ public class Lottery extends JavaPlugin {
         yaml.loadConfig();
 
 
-        getCommand("/lottery").setExecutor(new LotteryCommand(this));
-        getCommand("/reloadlottery").setExecutor(new LotteryReloadCommand(this));
+        getCommand("lottery").setExecutor(new LotteryCommand(this));
+        getCommand("reloadlottery").setExecutor(new LotteryReloadCommand(this));
 
 
     }
